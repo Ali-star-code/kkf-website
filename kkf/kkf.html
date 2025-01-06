@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kunta Kinteh Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="kkf.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
+    <style>
+        .hero-section {
+            background: linear-gradient(to right, #f8f6f5, #fcfbfb);
+            color: rgb(12, 12, 12);
+            padding: 50px 0;
+        }
+        .btn-primary {
+            background-color: #141414;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #dad2cd;
+        }
+        .about-section, .mission-vision-section, .activities-section, .events-section, .ecommerce-section, .membership-section, .executive-section, .donate-section, .contact-section {
+            padding: 50px 0;
+        }
+        .about-section {
+            background-color: #f9f9f9;
+        }
+        .mission-vision-section {
+            background-color: #f1f1f1;
+        }
+        .activities-section {
+            background-color: #e9e9e9;
+        }
+        .events-section {
+            background-color: #e1e1e1;
+        }
+        .ecommerce-section {
+            background-color: #d9d9d9;
+        }
+        .membership-section {
+            background-color: #d1d1d1;
+        }
+        .executive-section {
+            background-color: #c9c9c9;
+        }
+        .donate-section {
+            background-color: #c1c1c1;
+        }
+        .contact-section {
+            background-color: #b9b9b9;
+        }
+        .activity-image-preview {
+            display: none;
+            margin-top: 10px;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/images.jpeg" alt="kunta Kinteh Foundation" width="30" height="30" class="d-inline-block align-top">
+             kunta Kinteh Foundation   
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mission-vision">Mission & Vision</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Event Calendar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ecommerce">E-commerce</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#membership">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#executive">Executive</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#donate">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section animate__animated animate__fadeIn">
+        <div class="container text-center">
+            <img src="images/images.jpeg" alt="Kunta Kinteh Foundation Logo" class="img-fluid">
+            <h1>Welcome to Kunta Kinteh Foundation</h1>
+            <p>Empowering Change and Building a Better Future</p>
+            <button id="presidentMessageBtn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#presidentMessageModal">Message from the President</button>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="presidentMessageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Message from the President</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Welcome to the Kunta Kinteh Foundation! Together, we build a better future.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section animate__animated animate__fadeInUp">
+        <div class="container">
+            <h2>About the Foundation</h2>
+            <p>The Kunta Kinteh Foundation was established to...</p>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section id="mission-vision" class="mission-vision-section animate__animated animate__fadeInUp">
+        <div class="container">
+            <h2>Mission and Vision</h2>
+            <p><strong>Mission:</strong> To empower communities...</p>
+            <p><strong>Vision:</strong> To build a world where...</p>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="activities-section animate__animated animate__fadeInUp">
+        <div class="container">
+            <h2>Foundation Activities</h2>
+            <p>Here are some of the past and upcoming activities...</p>
+            <div class="accordion" id="activitiesAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Activity 1: Community Outreach
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#activitiesAccordion">
+                        <div class="accordion-body">
+                            <p>Description of Community Outreach activity...</p>
+                            <input type="file" id="activity1Image" accept="image/*" title="Upload image for Activity 1">
+                            <img id="activity1Preview" src="#" alt="Activity 1 Image" class="activity-image-preview">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Activity 2: Educational Programs
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#activitiesAccordion">
+                        <div class="accordion-body">
+                            <p>Description of Educational Programs activity...</p>
+                            <input type="file" id="activity2Image" accept="image/*" title="Upload image for Activity 2">
+                            <img id="activity2Preview" src="#" alt="Activity 2 Image" class="activity-image-preview">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Activity 3: Health Initiatives
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#activitiesAccordion">
+                        <div class="accordion-body">
+                            <p>Description of Health Initiatives activity...</p>
+                            <input type="file" id="activity3Image" accept="image/*" title="Upload image for Activity 3">
+                            <img id="activity3Preview" src="#" alt="Activity 3 Image" class="activity-image-preview">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Calendar Section -->
+    <section id="events" class="events-section animate__animated animate__fadeInUp">
+        <div class="container">
+            <h2>Event Calendar</h2>
+            <div id="calendar"></div>
+        </div>
+    </section>
+
+    <!-- Event Details Modal -->
+    <div class="modal fade" id="eventDetailsModal" tabindex="-1" aria-labelledby="eventDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="eventDetailsModalLabel">Event Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 id="eventTitle"></h5>
+                    <p id="eventDescription"></p>
+                    <p><strong>Date:</strong> <span id="eventDate"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- E-commerce Section -->
+    <section id="ecommerce" class="ecommerce-section animate__animated animate__fadeInUp">
+        <div class="container">
+            <h2>Our Products</h2>
+            <p>Browse through our merchandise...</p>
+            <a href="products.html" class="btn btn-success">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section id="membership" class="membership-section animate__animated animate__fadeInUp">
+        <div class="container">
+            <h2>Join Us</h2>
+            <p>Become a member of the Kunta Kinteh Foundation...</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#membershipModal">Join Now</button>
+        </div>
+    </section>
+
+    <!-- Membership Modal -->
+    <div class="modal fade" id="membershipModal" tabindex="-1" aria-labelledby="membershipModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="membershipModalLabel">Membership Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="membershipForm">
+                        <div class="mb-3">
+                            <label for="memberName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="memberName" required title="Enter your name" placeholder="Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="memberEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="memberEmail" required title="Enter your email" placeholder="Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="memberPhone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="memberPhone" required title="Enter your phone number" placeholder="Phone">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Executive Section -->
+    <section id="executive" class="executive-section animate__animated animate__fadeInUp">
+        <div class="container">
+            <h2>Our Executive Members</h2>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#executiveModal" data-name="John Doe" data-position="President" data-bio="John Doe has been leading the foundation since its inception." data-image="images/john_doe.jpg">
+                        <img src="images/john_doe.jpg" class="card-img-top" alt="John Doe">
+                        <div class="card-body">
+                            <h5 class="card-title">John Doe</h5>
+                            <p class="card-text">President</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#executiveModal" data-name="Jane Smith" data-position="Vice President" data-bio="Jane Smith is responsible for overseeing all operations." data-image="images/jane_smith.jpg">
+                        <img src="images/jane_smith.jpg" class="card-img-top" alt="Jane Smith">
+                        <div class="card-body">
+                            <h5 class="card-title">Jane Smith</h5>
+                            <p class="card-text">Vice President</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card" data-bs-toggle="modal" data-bs-target="#executiveModal" data-name="Michael Brown" data-position="Treasurer" data-bio="Michael Brown manages the foundation's finances." data-image="images/michael_brown.jpg">
+                        <img src="images/michael_brown.jpg" class="card-img-top" alt="Michael Brown">
+                        <div class="card-body">
+                            <h5 class="card-title">Michael Brown</h5>
+                            <p class="card-text">Treasurer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Member Details Modal -->
+    <div class="modal fade" id="executiveModal" tabindex="-1" aria-labelledby="executiveModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="executiveModalLabel">Executive Member Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="executiveImage" src="#" alt="Executive Image" class="img-fluid mb-3">
+                    <h5 id="executiveName"></h5>
+                    <p id="executivePosition"></p>
+                    <p id="executiveBio"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Donate Section -->
+    <section id="donate" class="donate-section animate__animated animate__fadeInUp">
+        <div class="container">
+            <h2>Support the Foundation</h2>
+            <p>Help us continue our mission...</p>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#donateModal">Donate Now</button>
+        </div>
+    </section>
+
+    <!-- Donate Modal -->
+    <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="donateModalLabel">Donate to Kunta Kinteh Foundation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>You can donate using the following methods:</p>
+                    <ul>
+                        <li>Wave Number: 3611808</li>
+                        <li>Bank Account: 123456789 (Bank Name)</li>
+                        <li>PayPal: <a href="https://paypal.me/kuntaKintehFoundation" target="_blank" rel="noopener">paypal.me/kuntaKintehFoundation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section animate__animated animate__fadeInUp">
+        <div class="container">
+            <h2>What People Say About Us</h2>
+            <div class="testimonial">
+                <p>"The Kunta Kinteh Foundation has changed my life for the better. Their support is invaluable."</p>
+                <p><strong>- lamin ceesay</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"An amazing organization with a noble mission. Proud to be a part of it."</p>
+                <p><strong>- kebba sanneh</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section animate__animated animate__fadeInUp">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out to us for any inquiries...</p>
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" required title="Enter your name" placeholder="Name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required title="Enter your email" placeholder="Email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="3" required title="Enter your message" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div id="responseMessage"></div>
+        </div>
+    </section>
+
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Example: Send form data to a server
+        fetch('https://example.com/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, message }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('responseMessage').innerText = 'Message sent successfully!';
+        })
+        .catch(error => {
+            document.getElementById('responseMessage').innerText = 'Error sending message.';
+        });
+    });
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXXXXX-X');
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Kunta Kinteh Foundation. All rights reserved.</p>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js'></script>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js'></script>
+    <script src="kkf.js"></script>
+</body>
+</html>
+
+    <script src="kkf.js"></script>
+</body>
+</html>
